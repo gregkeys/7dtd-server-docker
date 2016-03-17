@@ -17,7 +17,6 @@ COPY 7dtd.sh bin/7dtd
 RUN chown -R livingdead:livingdead /home/livingdead
 
 # Expose the default 7dtd server port
-EXPOSE 8080/tcp 8081/tcp
-EXPOSE 26900 26901 26902
+EXPOSE 26900-26902 26900-26902/udp 8080-8081/tcp
 
 CMD ["/home/livingdead/bin/7dtd"]
